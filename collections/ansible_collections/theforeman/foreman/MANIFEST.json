@@ -2,10 +2,11 @@
  "collection_info": {
   "namespace": "theforeman",
   "name": "foreman",
-  "version": "3.11.0",
+  "version": "3.12.0",
   "authors": [
    "@lessfoobar <59063885+lessfoobar@users.noreply.github.com>",
    "Adam R\u016f\u017ei\u010dka <aruzicka@redhat.com>",
+   "Alan.Wong <alawong@redhat.com>",
    "AlanCoding <arominge@redhat.com>",
    "Andrew Kofink <ajkofink@gmail.com>",
    "Anthony Green <green@moxielogic.com>",
@@ -46,6 +47,7 @@
    "Lester Cheung <lcheung@threatmetrix.com>",
    "Lester Claudio <claudiol@redhat.com>",
    "Lucas Bickel <hairmare@rabe.ch>",
+   "Lukas Magauer <Lukas.Magauer@engel.at>",
    "Luk\u00e1\u0161 Zapletal <lzap+git@redhat.com>",
    "Manisha Singhal <manisha1595@gmail.com>",
    "Manuel Bonk <githubMB@bonkii.com>",
@@ -117,7 +119,7 @@
   "name": "FILES.json",
   "ftype": "file",
   "chksum_type": "sha256",
-  "chksum_sha256": "178898bcd5e0220ebf2caef818f9913eb9432b1b9ad4261d086628f8c4d107fa",
+  "chksum_sha256": "39ca473e07a95250ef3a747ce0e044cea6eb4bd8b18824f03c3163334083c353",
   "format": 1
  },
  "format": 1

@@ -81,7 +81,7 @@
    "name": "changelogs/changelog.yaml",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "b1992da9af4f25919d834e219d95c9f5282d7f22e18324a066bbc0b65d125377",
+   "chksum_sha256": "c1a80e4cc61bb2ae863ebe56dfc9a239aa4103584f4610482e5747a5843ef010",
    "format": 1
   },
   {
@@ -1068,7 +1068,7 @@
    "name": "docs/community.vmware.vmware_host_scanhba_module.rst",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "796da6615e0ed0e7ea85fd9a6df1ddd0bcfdfa076cf2b272828668c652167515",
+   "chksum_sha256": "34fdccf1ce845bc066262add3dbda824c0440df0ca168ceaa2d7b4434f48d1aa",
    "format": 1
   },
   {
@@ -1289,6 +1289,20 @@
    "format": 1
   },
   {
+   "name": "docs/community.vmware.vmware_vasa_info_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "95c5ad680104fd530a2c2ce48eac0d9a2f147b6ef4b408c77f2a393a07dcc2b4",
+   "format": 1
+  },
+  {
+   "name": "docs/community.vmware.vmware_vasa_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "751cf00e4e116349aedef6a9b7e825f268356bf0ac9690b9d3b257ba21ffa9c5",
+   "format": 1
+  },
+  {
    "name": "docs/community.vmware.vmware_vc_infraprofile_info_module.rst",
    "ftype": "file",
    "chksum_type": "sha256",
@@ -1481,7 +1495,7 @@
    "name": "meta/runtime.yml",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "5afb1282c86d41608f064895b0630e873292d76eda1b27a086027d8a7f561e2c",
+   "chksum_sha256": "8eed352af2ec688618865284e788e9bd51f57bcee9b8736bee33d4982940c4cd",
    "format": 1
   },
   {
@@ -1621,7 +1635,7 @@
    "name": "plugins/module_utils/vmware.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "118c1ee8ca543d5f1758b2f08aa8a03d73808c87d1615caf77da91f47183eb65",
+   "chksum_sha256": "395812cdbf7207af754a420a89d226d7fcc16529a65c40430a880acc521763a9",
    "format": 1
   },
   {
@@ -1629,6 +1643,13 @@
    "ftype": "file",
    "chksum_type": "sha256",
    "chksum_sha256": "39a7616284f46c36c84d924d51a3a613a984b615e88eb42a74b112fcf4102725",
+   "format": 1
+  },
+  {
+   "name": "plugins/module_utils/vmware_sms.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b17e5551eeee0fdff8997d10fe11bd1935ebfc8a330a498ac0205d1936a95110",
    "format": 1
   },
   {
@@ -1873,7 +1894,7 @@
    "name": "plugins/modules/vmware_deploy_ovf.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "22848988b0c33934f53e65a2a65dfc7322158879578f9d94579b696016ba8bb9",
+   "chksum_sha256": "af3054f0ce56f79ff145b01a905483ce488b6f55bb9c58cde5009a57fc852aaf",
    "format": 1
   },
   {
@@ -2006,7 +2027,7 @@
    "name": "plugins/modules/vmware_guest.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "b41f86e5e2b2d43279aef20c67d75504fc58ef22b19f01fc480fbb999659353b",
+   "chksum_sha256": "52105f0485c81ea20052b922c283565ff90829ca85d68f40266a301e9205dd74",
    "format": 1
   },
   {
@@ -2062,7 +2083,7 @@
    "name": "plugins/modules/vmware_guest_disk.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "90bb7f3f880392a45e2cd8b9602148cf1a2f54a554853c5eb3c19498344774b5",
+   "chksum_sha256": "bc71e0400d2d170bd910f1d2ec98d03111f0e03390faa37928b241610ccff4bd",
    "format": 1
   },
   {
@@ -2440,7 +2461,7 @@
    "name": "plugins/modules/vmware_host_scanhba.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "77f68c9b40a1955f9ddd29253e4a86005f06f9a9136ad393b092aac017d36ff3",
+   "chksum_sha256": "7b3a3aafa0fd9786cfd95cd61a2d48c275f2239695ac5a7e4724c2ad79b675ab",
    "format": 1
   },
   {
@@ -2644,6 +2665,20 @@
    "ftype": "file",
    "chksum_type": "sha256",
    "chksum_sha256": "0e93bdd31279065c30afa48703a9d2869b3b4862afdf50bbe7d92931d647a5ec",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/vmware_vasa.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c9b342b3a4aa136c04ec2218c90aa61ded4f123df06f2219c6b65840e2edb872",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/vmware_vasa_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8a306fab8946b8655f79b831cd3a9a0fb811eb99ff060ea2a4dc5cb738ee1bb5",
    "format": 1
   },
   {
@@ -5016,7 +5051,7 @@
    "name": "tests/integration/targets/vmware_guest_disk/tasks/main.yml",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "bf466158455f443ba7aa06185fc85e6c738ae62f809ca8aad05a8644ff7d6ec9",
+   "chksum_sha256": "1822eedb28837952ecc92e8e1bb2507233444035ba534e3de65c20186afd1388",
    "format": 1
   },
   {
@@ -7981,6 +8016,13 @@
    "format": 1
   },
   {
+   "name": "tests/sanity/ignore-2.16.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "27c2ff3e501253b91d57e1f700d4fc5591d80e1bb64e60df49f0d68b2e0c3efc",
+   "format": 1
+  },
+  {
    "name": "tests/unit",
    "ftype": "dir",
    "chksum_type": null,
@@ -8212,6 +8254,13 @@
    "format": 1
   },
   {
+   "name": "tools/antsibull-docs-wrapper.sh",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fcc6eb87838f15d6c91abddf87cc61459a650291983a2157890fbedf2ebd8b71",
+   "format": 1
+  },
+  {
    "name": "tools/check-ignores-order",
    "ftype": "file",
    "chksum_type": "sha256",
@@ -8222,7 +8271,7 @@
    "name": "tools/create_documentation_tasks.yml",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "7f2945d104528e48b85e07ab858c4c45c9991543563c8a840d7727e14c429d54",
+   "chksum_sha256": "914307d0b440a089e28f4819b3d4fbb5f53ebe713bfa453a14ccdcc3830b51f6",
    "format": 1
   },
   {
@@ -8264,7 +8313,7 @@
    "name": "CHANGELOG.rst",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "3b25df8adb1df7dd77fcf4381809a88f7ecd791f20f48766d4b69caf348a2158",
+   "chksum_sha256": "4070ddbbf79c8a0d9db573182c6a1feb899b5214d299e3c3ec1bf1af34bc90ad",
    "format": 1
   },
   {
@@ -8285,7 +8334,7 @@
    "name": "README.md",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "93c53e4a9542a3d352fddfcea7c75c0bfb606d15897d147b78f5a25f43237cf5",
+   "chksum_sha256": "bf06c8fe0a916b8d25023c929f8a86a0e921182b47f9dde3ef72926fd58be971",
    "format": 1
   },
   {

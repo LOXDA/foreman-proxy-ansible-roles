@@ -897,13 +897,13 @@ class RedfishUtils(object):
             if data.get('Members'):
                 for controller in data[u'Members']:
                     controller_list.append(controller[u'@odata.id'])
-                for c in controller_list:
+                for idx, c in enumerate(controller_list):
                     uri = self.root_uri + c
                     response = self.get_request(uri)
                     if response['ret'] is False:
                         return response
                     data = response['data']
-                    controller_name = 'Controller 1'
+                    controller_name = 'Controller %s' % str(idx)
                     if 'StorageControllers' in data:
                         sc = data['StorageControllers']
                         if sc:
@@ -912,7 +912,26 @@ class RedfishUtils(object):
                             else:
                                 sc_id = sc[0].get('Id', '1')
                                 controller_name = 'Controller %s' % sc_id
+                    elif 'Controllers' in data:
+                        response = self.get_request(self.root_uri + data['Controllers'][u'@odata.id'])
+                        if response['ret'] is False:
+                            return response
+                        c_data = response['data']
+
+                        if c_data.get('Members') and c_data['Members']:
+                            response = self.get_request(self.root_uri + c_data['Members'][0][u'@odata.id'])
+                            if response['ret'] is False:
+                                return response
+                            member_data = response['data']
+
+                            if member_data:
+                                if 'Name' in member_data:
+                                    controller_name = member_data['Name']
+                                else:
+                                    controller_id = member_data.get('Id', '1')
+                                    controller_name = 'Controller %s' % controller_id
                     volume_results = []
+                    volume_list = []
                     if 'Volumes' in data:
                         # Get a list of all volumes and build respective URIs
                         volumes_uri = data[u'Volumes'][u'@odata.id']
@@ -1121,7 +1140,8 @@ class RedfishUtils(object):
         user_list = []
         users_results = []
         # Get these entries, but does not fail if not found
-        properties = ['Id', 'Name', 'UserName', 'RoleId', 'Locked', 'Enabled']
+        properties = ['Id', 'Name', 'UserName', 'RoleId', 'Locked', 'Enabled',
+                      'AccountTypes', 'OEMAccountTypes']
 
         response = self.get_request(self.root_uri + self.accounts_uri)
         if response['ret'] is False:
@@ -1143,6 +1163,12 @@ class RedfishUtils(object):
             for property in properties:
                 if property in data:
                     user[property] = data[property]
+
+            # Filter out empty account slots
+            # An empty account slot can be detected if the username is an empty
+            # string and if the account is disabled
+            if user.get('UserName', '') == '' and not user.get('Enabled', False):
+                continue
 
             users_results.append(user)
         result["entries"] = users_results
@@ -1166,6 +1192,10 @@ class RedfishUtils(object):
             payload['Password'] = user.get('account_password')
         if user.get('account_roleid'):
             payload['RoleId'] = user.get('account_roleid')
+        if user.get('account_accounttypes'):
+            payload['AccountTypes'] = user.get('account_accounttypes')
+        if user.get('account_oemaccounttypes'):
+            payload['OEMAccountTypes'] = user.get('account_oemaccounttypes')
         return self.patch_request(self.root_uri + uri, payload, check_pyld=True)
 
     def add_user(self, user):
@@ -1196,6 +1226,10 @@ class RedfishUtils(object):
             payload['Password'] = user.get('account_password')
         if user.get('account_roleid'):
             payload['RoleId'] = user.get('account_roleid')
+        if user.get('account_accounttypes'):
+            payload['AccountTypes'] = user.get('account_accounttypes')
+        if user.get('account_oemaccounttypes'):
+            payload['OEMAccountTypes'] = user.get('account_oemaccounttypes')
         if user.get('account_id'):
             payload['Id'] = user.get('account_id')
 
@@ -2262,7 +2296,7 @@ class RedfishUtils(object):
         key = "Processors"
         # Get these entries, but does not fail if not found
         properties = ['Id', 'Name', 'Manufacturer', 'Model', 'MaxSpeedMHz',
-                      'TotalCores', 'TotalThreads', 'Status']
+                      'ProcessorArchitecture', 'TotalCores', 'TotalThreads', 'Status']
 
         # Search for 'key' entry and extract URI from it
         response = self.get_request(self.root_uri + systems_uri)

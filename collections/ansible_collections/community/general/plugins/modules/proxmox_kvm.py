@@ -287,8 +287,9 @@ options:
     type: int
   name:
     description:
-      - Specifies the VM name. Only used on the configuration web interface.
+      - Specifies the VM name. Name could be non-unique across the cluster.
       - Required only for O(state=present).
+      - With O(state=present) if O(vmid) not provided and VM with name exists in the cluster then no changes will be made.
     type: str
   nameservers:
     description:
@@ -551,6 +552,8 @@ options:
       - compatibility
       - no_defaults
     version_added: "1.3.0"
+seealso:
+  - module: community.general.proxmox_vm_info
 extends_documentation_fragment:
   - community.general.proxmox.documentation
   - community.general.proxmox.selection
@@ -787,6 +790,15 @@ EXAMPLES = '''
     name: spynal
     node: sabrewulf
     state: absent
+
+- name: Get VM current state
+  community.general.proxmox_kvm:
+    api_user: root@pam
+    api_password: secret
+    api_host: helldorado
+    name: spynal
+    node: sabrewulf
+    state: current
 
 - name: Update VM configuration
   community.general.proxmox_kvm:
@@ -1099,6 +1111,20 @@ class ProxmoxKvmAnsible(ProxmoxAnsible):
             return False
         return True
 
+    def restart_vm(self, vm, **status):
+        vmid = vm['vmid']
+        try:
+            proxmox_node = self.proxmox_api.nodes(vm['node'])
+            taskid = proxmox_node.qemu(vmid).status.reboot.post()
+            if not self.wait_for_task(vm['node'], taskid):
+                self.module.fail_json(msg='Reached timeout while waiting for rebooting VM. Last line in task before timeout: %s' %
+                                          proxmox_node.tasks(taskid).log.get()[:1])
+                return False
+            return True
+        except Exception as e:
+            self.module.fail_json(vmid=vmid, msg="restarting of VM %s failed with exception: %s" % (vmid, e))
+            return False
+
     def migrate_vm(self, vm, target_node):
         vmid = vm['vmid']
         proxmox_node = self.proxmox_api.nodes(vm['node'])
@@ -1264,10 +1290,14 @@ def main():
     # the cloned vm name or retrieve the next free VM id from ProxmoxAPI.
     if not vmid:
         if state == 'present' and not update and not clone and not delete and not revert and not migrate:
-            try:
-                vmid = proxmox.get_nextvmid()
-            except Exception:
-                module.fail_json(msg="Can't get the next vmid for VM {0} automatically. Ensure your cluster state is good".format(name))
+            existing_vmid = proxmox.get_vmid(name, ignore_missing=True)
+            if existing_vmid:
+                vmid = existing_vmid
+            else:
+                try:
+                    vmid = proxmox.get_nextvmid()
+                except Exception:
+                    module.fail_json(msg="Can't get the next vmid for VM {0} automatically. Ensure your cluster state is good".format(name))
         else:
             clone_target = clone or name
             vmid = proxmox.get_vmid(clone_target, ignore_missing=True)
@@ -1458,16 +1488,13 @@ def main():
             module.fail_json(msg='VM with name = %s does not exist in cluster' % name)
 
         status = {}
-        try:
-            vm = proxmox.get_vm(vmid)
-            status['status'] = vm['status']
-            if vm['status'] == 'stopped':
-                module.exit_json(changed=False, vmid=vmid, msg="VM %s is not running" % vmid, **status)
+        vm = proxmox.get_vm(vmid)
+        status['status'] = vm['status']
+        if vm['status'] == 'stopped':
+            module.exit_json(changed=False, vmid=vmid, msg="VM %s is not running" % vmid, **status)
 
-            if proxmox.stop_vm(vm, force=module.params['force']) and proxmox.start_vm(vm):
-                module.exit_json(changed=True, vmid=vmid, msg="VM %s is restarted" % vmid, **status)
-        except Exception as e:
-            module.fail_json(vmid=vmid, msg="restarting of VM %s failed with exception: %s" % (vmid, e), **status)
+        if proxmox.restart_vm(vm):
+            module.exit_json(changed=True, vmid=vmid, msg="VM %s is restarted" % vmid, **status)
 
     elif state == 'absent':
         status = {}
@@ -1483,7 +1510,7 @@ def main():
             status['status'] = vm['status']
             if vm['status'] == 'running':
                 if module.params['force']:
-                    proxmox.stop_vm(vm, True)
+                    proxmox.stop_vm(vm, True, timeout=module.params['timeout'])
                 else:
                     module.exit_json(changed=False, vmid=vmid, msg="VM %s is running. Stop it before deletion or use force=true." % vmid)
             taskid = proxmox_node.qemu.delete(vmid)
