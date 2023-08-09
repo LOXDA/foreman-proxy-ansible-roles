@@ -1,0 +1,14 @@
+---
+- name: Disable 3D features if not needed
+  community.vmware.vmware_guest:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    validate_certs: false
+    cluster: "{{ cluster_name }}"
+    uuid: "{{ item.uuid }}"
+    advanced_settings:
+      - key: "mks.enable3d"
+        value: "FALSE"
+  when: "'vCLS (' not in item.guest_name"
+  with_items: "{{ vm_filtered }}"

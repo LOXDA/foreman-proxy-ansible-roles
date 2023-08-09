@@ -1,0 +1,481 @@
+{
+ "files": [
+  {
+   "name": ".",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "changelogs",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "changelogs/changelog.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "428d77dfe77c0a2ff972ab63284e9f0b63b5688441b63412779e1931df0c58dd",
+   "format": 1
+  },
+  {
+   "name": "meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "meta/runtime.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2639689245767a880afb749f99f77ffeed83f03a36901d8581cde2c3293f3be3",
+   "format": 1
+  },
+  {
+   "name": "meta/execution-environment.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c622e5fce9532748fc2da067061041a6fbd4224c7a901f9dfda382cb615ad98c",
+   "format": 1
+  },
+  {
+   "name": "CHANGELOG.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "df98c2df183cbd8f6e78cacf39fc9530d15f387a7f594ff8435a99a65dee6a55",
+   "format": 1
+  },
+  {
+   "name": "requirements.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "01186168f2f12f446c5a1046c3bd1952719f4e2edbf0d0c39082f6ebee2bc430",
+   "format": 1
+  },
+  {
+   "name": "roles",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/postgresql_upgrade",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/postgresql_upgrade/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "18db6c27085bcf6958da0e1aaafbc663e1cbf6ea4efa56dc2d9c507eb73e36be",
+   "format": 1
+  },
+  {
+   "name": "roles/postgresql_upgrade/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/postgresql_upgrade/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "84eb53616ebcbabe14cbdd7ef076d82756ebe5f054c2d2ea4aae9683f8862c51",
+   "format": 1
+  },
+  {
+   "name": "roles/foreman_proxy_certs_generate",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/foreman_proxy_certs_generate/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "eb98fba2ca624031788527acd657b19ab15c2f86f1bfce6a8806f78be3ddcece",
+   "format": 1
+  },
+  {
+   "name": "roles/foreman_proxy_certs_generate/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/foreman_proxy_certs_generate/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5bcd609ea7c75f46e9f16d51d14dac985f61b65620116b2e22a74470cc0f5fc1",
+   "format": 1
+  },
+  {
+   "name": "roles/foreman_proxy_certs_generate/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/foreman_proxy_certs_generate/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9e893ad019f2b9ba6761b78cb546114a98cb47110a1004e0a61709767c50b91e",
+   "format": 1
+  },
+  {
+   "name": "roles/foreman_repositories",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/foreman_repositories/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a65a3b97cf87833db7908d9085f9abc24bf5567eecd197f2885e4fc246e08b1f",
+   "format": 1
+  },
+  {
+   "name": "roles/foreman_repositories/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/foreman_repositories/tasks/debian.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "27332f4542419db96c5dfc7c107df47b80b19b46733d273d41c35dac7f52fd1b",
+   "format": 1
+  },
+  {
+   "name": "roles/foreman_repositories/tasks/redhat-modules.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "13668e8518b487ef67c29848021997c2c67a3942cc3aa5924ebb47049baeeb3b",
+   "format": 1
+  },
+  {
+   "name": "roles/foreman_repositories/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3daa830086568ede58d503dd30f5787529e62d5683724490037ce25003fa6060",
+   "format": 1
+  },
+  {
+   "name": "roles/foreman_repositories/tasks/redhat.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e722c7c3a04186194162b82568701fe1507151cb180a0c947004df02025fd5f1",
+   "format": 1
+  },
+  {
+   "name": "roles/foreman_repositories/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/foreman_repositories/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5b13c68be0fcb88191ac09e1695772229a10c7e3d17f823733aac280a5ebfd29",
+   "format": 1
+  },
+  {
+   "name": "roles/backup",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/backup/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "085c638a3b734ffb0d65e314276a5f8e245fd7303aa61d3c21621c5723a2fc04",
+   "format": 1
+  },
+  {
+   "name": "roles/backup/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/backup/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ba2b0882893c5d9ff3bc64b6ea02698388b869ad7f923b27f0f63e11e77dc0fe",
+   "format": 1
+  },
+  {
+   "name": "roles/backup/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/backup/templates/foreman-backup.sh.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c1fbaedf3d71db1860bfa9877bace0e154bae084e937abaddc9aae326a8ba3dc",
+   "format": 1
+  },
+  {
+   "name": "roles/backup/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/backup/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a80377510526c8b55898dc4c1038004753d67891d383e859fdd14ff7d862f6ff",
+   "format": 1
+  },
+  {
+   "name": "roles/puppet_repositories",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/puppet_repositories/vars",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/puppet_repositories/vars/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e667100af806540320bf6ddbc1460dfb1a32ef897897f20a30ce0a0910ecc1d1",
+   "format": 1
+  },
+  {
+   "name": "roles/puppet_repositories/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ba08623529bd8082613645d22201895b666749335dee61e8636609fb96162392",
+   "format": 1
+  },
+  {
+   "name": "roles/puppet_repositories/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/puppet_repositories/tasks/debian.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5b54927bc57cfd33fa818948ee98a3ae0b52fadcf07d497c5922212c19ace507",
+   "format": 1
+  },
+  {
+   "name": "roles/puppet_repositories/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "011d914e7a0bff6a7188c7608c2470c2aa083ba286be2b19306d7e119d003840",
+   "format": 1
+  },
+  {
+   "name": "roles/puppet_repositories/tasks/redhat.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8b3388dac28845f4505700f3914d3c77987b4cfcf44a7aaa22674548e6b8ac04",
+   "format": 1
+  },
+  {
+   "name": "roles/puppet_repositories/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/puppet_repositories/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fe947d0f75c571fafdddd157244a29bde8824747180afac9d45b31921d58ee99",
+   "format": 1
+  },
+  {
+   "name": "roles/cloud_connector",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/cloud_connector/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "56e245f501a885f884fef0478eb9837ed64213745bd384753bea096136492dac",
+   "format": 1
+  },
+  {
+   "name": "roles/cloud_connector/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/cloud_connector/tasks/cleanup_receptor.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5de448e219aa02347f7c82c8e267fc046397a3ee21fe3f12907bf452d51f90c5",
+   "format": 1
+  },
+  {
+   "name": "roles/cloud_connector/tasks/http_proxy.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "555d5c918964fb00abe0a41fb2a56def5509850da3e79e4bde24b8c73a9cc725",
+   "format": 1
+  },
+  {
+   "name": "roles/cloud_connector/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f01ef5f721a39fae8074f7403abe9f3946c94cdaba184f6c38ae38ff749b9a1d",
+   "format": 1
+  },
+  {
+   "name": "roles/cloud_connector/tasks/delete_source.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8593dea9aa18f313ef9518a1d05191df2546bea53c1481de3c3374bafd9267ca",
+   "format": 1
+  },
+  {
+   "name": "roles/cloud_connector/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/cloud_connector/templates/foreman_rh_cloud.toml.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fdf64907eb5d6ba76bc87f8fb747ae8e7239d03ecc5a2a2fe3eeda2fbbcc63b4",
+   "format": 1
+  },
+  {
+   "name": "roles/cloud_connector/templates/proxy.conf.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d61eb2a31ae6b2a0f6b0f82c6e2055aadbf3eb50a622949f46279612d019271e",
+   "format": 1
+  },
+  {
+   "name": "roles/cloud_connector/handlers",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/cloud_connector/handlers/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6451e619a8ec93d9bad240b11c306bf1e097c2bedcc407f6f574cf4e6081af34",
+   "format": 1
+  },
+  {
+   "name": "roles/cloud_connector/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/cloud_connector/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1a07ee05737237e05c4d7e4511472ea45b1514de8ed86e2d6946590162e9095f",
+   "format": 1
+  },
+  {
+   "name": "roles/installer",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/installer/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3e06e1d239c9b1eb07d8df8117f356b287ff3b1917845badf166477d997e1f3b",
+   "format": 1
+  },
+  {
+   "name": "roles/installer/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/installer/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "860e7ab9ee77c68c57d8e6a42f31d0f7b09d4aaaa7266382a5f8e233cd35a98d",
+   "format": 1
+  },
+  {
+   "name": "roles/installer/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/installer/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "959ad79299ceec5cbfd660670b3bd40e2aee0ea3894498771ff8a07e8cac7777",
+   "format": 1
+  },
+  {
+   "name": "LICENSE",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+   "format": 1
+  }
+ ],
+ "format": 1
+}

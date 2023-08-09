@@ -1,0 +1,43 @@
+---
+# tasks file for vm_scg
+- name: Gather all VMs
+  community.vmware.vmware_vm_info:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    validate_certs: false
+    vm_type: vm
+  delegate_to: localhost
+  register: vm_info
+- name: Filter for cluster
+  ansible.builtin.set_fact:
+    vm_filtered: "{{ vm_info | json_query(vm_query) }}"
+  vars:
+    vm_query: 'virtual_machines[?cluster==`{{ cluster_name }}`]'
+- name: Debug Filtered VMs
+  ansible.builtin.debug:
+    var: vm_filtered
+    verbosity: 2
+
+- include_tasks: vm_scg_disable_copy.yml
+  when: vm_scg_disable_copy | bool
+- include_tasks: vm_scg_disable_paste.yml
+  when: vm_scg_disable_paste | bool
+- include_tasks: vm_scg_disable_disk_shrink.yml
+  when: vm_scg_disable_disk_shrink | bool
+- include_tasks: vm_scg_disable_disk_wiper.yml
+  when: vm_scg_disable_disk_wiper | bool
+- include_tasks: vm_scg_disable_3d.yml
+  when: vm_scg_disable_3d | bool
+- include_tasks: vm_scg_limit_vmrc.yml
+  when: vm_scg_limit_vmrc | bool
+- include_tasks: vm_scg_limit_setinfo.yml
+  when: vm_scg_limit_setinfo | bool
+- include_tasks: vm_scg_log_retention.yml
+  when: vm_scg_log_retention | bool
+- include_tasks: vm_scg_log_rotation.yml
+  when: vm_scg_log_rotation | bool
+- include_tasks: vm_scg_restrict_host_info.yml
+  when: vm_scg_restrict_host_info | bool
+- include_tasks: vm_scg_vmrc_lock.yml
+  when: vm_scg_vmrc_lock | bool

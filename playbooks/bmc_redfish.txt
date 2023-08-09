@@ -1,0 +1,1565 @@
+
+PLAY [bmc-adn3] ****************************************************************
+
+TASK [Get CPU inventory] *******************************************************
+ok: [bmc-adn3]
+
+TASK [debug] *******************************************************************
+ok: [bmc-adn3] => 
+  msg: |-
+    [
+        [
+            {
+                "system_uri": "/redfish/v1/Systems/System.Embedded.1"
+            },
+            [
+                {
+                    "Id": "CPU.Socket.1",
+                    "Manufacturer": "Intel",
+                    "MaxSpeedMHz": 4000,
+                    "Model": "Intel(R) Xeon(R) CPU E5-2630 v3 @ 2.40GHz",
+                    "Name": "CPU 1",
+                    "Status": {
+                        "Health": "OK",
+                        "State": "Enabled"
+                    },
+                    "TotalCores": 8,
+                    "TotalThreads": 16
+                },
+                {
+                    "Id": "CPU.Socket.2",
+                    "Manufacturer": "Intel",
+                    "MaxSpeedMHz": 4000,
+                    "Model": "Intel(R) Xeon(R) CPU E5-2630 v3 @ 2.40GHz",
+                    "Name": "CPU 2",
+                    "Status": {
+                        "Health": "OK",
+                        "State": "Enabled"
+                    },
+                    "TotalCores": 8,
+                    "TotalThreads": 16
+                }
+            ]
+        ]
+    ]
+
+TASK [Get memory inventory] ****************************************************
+ok: [bmc-adn3]
+
+TASK [debug] *******************************************************************
+ok: [bmc-adn3] => 
+  msg: |-
+    {
+        "memory": {
+            "entries": [
+                [
+                    {
+                        "system_uri": "/redfish/v1/Systems/System.Embedded.1"
+                    },
+                    [
+                        {
+                            "CapacityMiB": 15625,
+                            "Id": "iDRAC.Embedded.1#DIMMSLOTA1",
+                            "Manufacturer": "Hynix Semiconductor",
+                            "MemoryDeviceType": "DDR4",
+                            "Name": "DIMM A1",
+                            "OperatingMemoryModes": [],
+                            "PartNumber": "HMA82GR7MFR8N-UH",
+                            "RankCount": 2,
+                            "SerialNumber": "28071124",
+                            "Status": {
+                                "Health": "OK",
+                                "State": "Enabled"
+                            }
+                        },
+                        {
+                            "CapacityMiB": 15625,
+                            "Id": "iDRAC.Embedded.1#DIMMSLOTA2",
+                            "Manufacturer": "Hynix Semiconductor",
+                            "MemoryDeviceType": "DDR4",
+                            "Name": "DIMM A2",
+                            "OperatingMemoryModes": [],
+                            "PartNumber": "HMA82GR7MFR8N-UH",
+                            "RankCount": 2,
+                            "SerialNumber": "28071127",
+                            "Status": {
+                                "Health": "OK",
+                                "State": "Enabled"
+                            }
+                        },
+                        {
+                            "CapacityMiB": 15625,
+                            "Id": "iDRAC.Embedded.1#DIMMSLOTA3",
+                            "Manufacturer": "Hynix Semiconductor",
+                            "MemoryDeviceType": "DDR4",
+                            "Name": "DIMM A3",
+                            "OperatingMemoryModes": [],
+                            "PartNumber": "HMA82GR7MFR8N-UH",
+                            "RankCount": 2,
+                            "SerialNumber": "28071126",
+                            "Status": {
+                                "Health": "OK",
+                                "State": "Enabled"
+                            }
+                        },
+                        {
+                            "CapacityMiB": 15625,
+                            "Id": "iDRAC.Embedded.1#DIMMSLOTA4",
+                            "Manufacturer": "Hynix Semiconductor",
+                            "MemoryDeviceType": "DDR4",
+                            "Name": "DIMM A4",
+                            "OperatingMemoryModes": [],
+                            "PartNumber": "HMA82GR7MFR8N-UH",
+                            "RankCount": 2,
+                            "SerialNumber": "28071125",
+                            "Status": {
+                                "Health": "OK",
+                                "State": "Enabled"
+                            }
+                        },
+                        {
+                            "CapacityMiB": 15625,
+                            "Id": "iDRAC.Embedded.1#DIMMSLOTB1",
+                            "Manufacturer": "Hynix Semiconductor",
+                            "MemoryDeviceType": "DDR4",
+                            "Name": "DIMM B1",
+                            "OperatingMemoryModes": [],
+                            "PartNumber": "HMA82GR7MFR8N-UH",
+                            "RankCount": 2,
+                            "SerialNumber": "2807D405",
+                            "Status": {
+                                "Health": "OK",
+                                "State": "Enabled"
+                            }
+                        },
+                        {
+                            "CapacityMiB": 15625,
+                            "Id": "iDRAC.Embedded.1#DIMMSLOTB2",
+                            "Manufacturer": "Hynix Semiconductor",
+                            "MemoryDeviceType": "DDR4",
+                            "Name": "DIMM B2",
+                            "OperatingMemoryModes": [],
+                            "PartNumber": "HMA82GR7MFR8N-UH",
+                            "RankCount": 2,
+                            "SerialNumber": "2807D3F4",
+                            "Status": {
+                                "Health": "OK",
+                                "State": "Enabled"
+                            }
+                        },
+                        {
+                            "CapacityMiB": 15625,
+                            "Id": "iDRAC.Embedded.1#DIMMSLOTB3",
+                            "Manufacturer": "Hynix Semiconductor",
+                            "MemoryDeviceType": "DDR4",
+                            "Name": "DIMM B3",
+                            "OperatingMemoryModes": [],
+                            "PartNumber": "HMA82GR7MFR8N-UH",
+                            "RankCount": 2,
+                            "SerialNumber": "2807D4C9",
+                            "Status": {
+                                "Health": "OK",
+                                "State": "Enabled"
+                            }
+                        },
+                        {
+                            "CapacityMiB": 15625,
+                            "Id": "iDRAC.Embedded.1#DIMMSLOTB4",
+                            "Manufacturer": "Hynix Semiconductor",
+                            "MemoryDeviceType": "DDR4",
+                            "Name": "DIMM B4",
+                            "OperatingMemoryModes": [],
+                            "PartNumber": "HMA82GR7MFR8N-UH",
+                            "RankCount": 2,
+                            "SerialNumber": "2807D3FC",
+                            "Status": {
+                                "Health": "OK",
+                                "State": "Enabled"
+                            }
+                        }
+                    ]
+                ]
+            ],
+            "ret": true
+        }
+    }
+
+TASK [Get fan inventory with a timeout of 20 seconds] **************************
+ok: [bmc-adn3]
+
+TASK [debug] *******************************************************************
+ok: [bmc-adn3] => 
+  msg: |-
+    {
+        "fan": {
+            "entries": [
+                {
+                    "FanName": "System Board Fan1A",
+                    "Name": "System Board Fan1A",
+                    "Reading": 2520,
+                    "ReadingUnits": "RPM",
+                    "Status": {
+                        "Health": "OK",
+                        "State": "Enabled"
+                    }
+                },
+                {
+                    "FanName": "System Board Fan1B",
+                    "Name": "System Board Fan1B",
+                    "Reading": 2400,
+                    "ReadingUnits": "RPM",
+                    "Status": {
+                        "Health": "OK",
+                        "State": "Enabled"
+                    }
+                },
+                {
+                    "FanName": "System Board Fan2A",
+                    "Name": "System Board Fan2A",
+                    "Reading": 2640,
+                    "ReadingUnits": "RPM",
+                    "Status": {
+                        "Health": "OK",
+                        "State": "Enabled"
+                    }
+                },
+                {
+                    "FanName": "System Board Fan2B",
+                    "Name": "System Board Fan2B",
+                    "Reading": 2520,
+                    "ReadingUnits": "RPM",
+                    "Status": {
+                        "Health": "OK",
+                        "State": "Enabled"
+                    }
+                },
+                {
+                    "FanName": "System Board Fan3A",
+                    "Name": "System Board Fan3A",
+                    "Reading": 2280,
+                    "ReadingUnits": "RPM",
+                    "Status": {
+                        "Health": "OK",
+                        "State": "Enabled"
+                    }
+                },
+                {
+                    "FanName": "System Board Fan3B",
+                    "Name": "System Board Fan3B",
+                    "Reading": 2520,
+                    "ReadingUnits": "RPM",
+                    "Status": {
+                        "Health": "OK",
+                        "State": "Enabled"
+                    }
+                },
+                {
+                    "FanName": "System Board Fan4A",
+                    "Name": "System Board Fan4A",
+                    "Reading": 2160,
+                    "ReadingUnits": "RPM",
+                    "Status": {
+                        "Health": "OK",
+                        "State": "Enabled"
+                    }
+                },
+                {
+                    "FanName": "System Board Fan4B",
+                    "Name": "System Board Fan4B",
+                    "Reading": 2520,
+                    "ReadingUnits": "RPM",
+                    "Status": {
+                        "Health": "OK",
+                        "State": "Enabled"
+                    }
+                },
+                {
+                    "FanName": "System Board Fan5A",
+                    "Name": "System Board Fan5A",
+                    "Reading": 2160,
+                    "ReadingUnits": "RPM",
+                    "Status": {
+                        "Health": "OK",
+                        "State": "Enabled"
+                    }
+                },
+                {
+                    "FanName": "System Board Fan5B",
+                    "Name": "System Board Fan5B",
+                    "Reading": 2280,
+                    "ReadingUnits": "RPM",
+                    "Status": {
+                        "Health": "OK",
+                        "State": "Enabled"
+                    }
+                },
+                {
+                    "FanName": "System Board Fan6A",
+                    "Name": "System Board Fan6A",
+                    "Reading": 2760,
+                    "ReadingUnits": "RPM",
+                    "Status": {
+                        "Health": "OK",
+                        "State": "Enabled"
+                    }
+                },
+                {
+                    "FanName": "System Board Fan6B",
+                    "Name": "System Board Fan6B",
+                    "Reading": 2640,
+                    "ReadingUnits": "RPM",
+                    "Status": {
+                        "Health": "OK",
+                        "State": "Enabled"
+                    }
+                }
+            ],
+            "ret": true
+        }
+    }
+
+TASK [Get Virtual Media information] *******************************************
+ok: [bmc-adn3]
+
+TASK [debug] *******************************************************************
+ok: [bmc-adn3] => 
+  msg: |-
+    [
+        [
+            {
+                "resource_uri": "/redfish/v1/Managers/iDRAC.Embedded.1"
+            },
+            [
+                {
+                    "ConnectedVia": "NotConnected",
+                    "Description": "iDRAC Virtual Media Services Settings",
+                    "Id": "RemovableDisk",
+                    "Image": null,
+                    "ImageName": null,
+                    "MediaTypes": [
+                        "USBStick"
+                    ],
+                    "Name": "Virtual Removable Disk",
+                    "WriteProtected": null
+                },
+                {
+                    "ConnectedVia": "NotConnected",
+                    "Description": "iDRAC Virtual Media Services Settings",
+                    "Id": "CD",
+                    "Image": null,
+                    "ImageName": null,
+                    "MediaTypes": [
+                        "CD",
+                        "DVD"
+                    ],
+                    "Name": "Virtual CD",
+                    "WriteProtected": null
+                }
+            ]
+        ]
+    ]
+
+TASK [Get Volume Inventory] ****************************************************
+ok: [bmc-adn3]
+
+TASK [debug] *******************************************************************
+ok: [bmc-adn3] => 
+  msg: |-
+    [
+        [
+            {
+                "system_uri": "/redfish/v1/Systems/System.Embedded.1"
+            },
+            [
+                {
+                    "Controller": "PERC H330 Mini",
+                    "Volumes": [
+                        {
+                            "BlockSizeBytes": 512,
+                            "CapacityBytes": 1999844147200,
+                            "EncryptionTypes": [],
+                            "Id": "Disk.Bay.0:Enclosure.Internal.0-1:RAID.Integrated.1-1",
+                            "Identifiers": [],
+                            "Linked_drives": [
+                                {
+                                    "Id": "Disk.Bay.0:Enclosure.Internal.0-1:RAID.Integrated.1-1"
+                                }
+                            ],
+                            "Name": "Physical Disk 0:1:0",
+                            "Operations": [],
+                            "Status": {
+                                "Health": "OK",
+                                "HealthRollup": "OK",
+                                "State": "Enabled"
+                            },
+                            "VolumeType": "RawDevice"
+                        },
+                        {
+                            "BlockSizeBytes": 512,
+                            "CapacityBytes": 1999844147200,
+                            "EncryptionTypes": [],
+                            "Id": "Disk.Bay.1:Enclosure.Internal.0-1:RAID.Integrated.1-1",
+                            "Identifiers": [],
+                            "Linked_drives": [
+                                {
+                                    "Id": "Disk.Bay.1:Enclosure.Internal.0-1:RAID.Integrated.1-1"
+                                }
+                            ],
+                            "Name": "Physical Disk 0:1:1",
+                            "Operations": [],
+                            "Status": {
+                                "Health": "OK",
+                                "HealthRollup": "OK",
+                                "State": "Enabled"
+                            },
+                            "VolumeType": "RawDevice"
+                        },
+                        {
+                            "BlockSizeBytes": 512,
+                            "CapacityBytes": 127372623872,
+                            "EncryptionTypes": [],
+                            "Id": "Disk.Bay.3:Enclosure.Internal.0-1:RAID.Integrated.1-1",
+                            "Identifiers": [],
+                            "Linked_drives": [
+                                {
+                                    "Id": "Disk.Bay.3:Enclosure.Internal.0-1:RAID.Integrated.1-1"
+                                }
+                            ],
+                            "Name": "Solid State Disk 0:1:3",
+                            "Operations": [],
+                            "Status": {
+                                "Health": "OK",
+                                "HealthRollup": "OK",
+                                "State": "Enabled"
+                            },
+                            "VolumeType": "RawDevice"
+                        }
+                    ]
+                },
+                {
+                    "Controller": "C610/X99 series chipset sSATA Controller [AHCI mode]",
+                    "Volumes": []
+                },
+                {
+                    "Controller": "C610/X99 series chipset 6-Port SATA Controller [AHCI mode]",
+                    "Volumes": []
+                }
+            ]
+        ]
+    ]
+
+TASK [Get Session information] *************************************************
+ok: [bmc-adn3]
+
+TASK [debug] *******************************************************************
+ok: [bmc-adn3] => 
+  msg: '[]'
+
+TASK [Get default inventory information] ***************************************
+ok: [bmc-adn3]
+
+TASK [debug] *******************************************************************
+ok: [bmc-adn3] => 
+  msg: |-
+    {
+        "system": {
+            "entries": [
+                [
+                    {
+                        "system_uri": "/redfish/v1/Systems/System.Embedded.1"
+                    },
+                    {
+                        "AssetTag": "MINEFI FRANCETHD1 1HTQWG2",
+                        "BiosVersion": "2.2.5",
+                        "HostName": "adn3",
+                        "Id": "System.Embedded.1",
+                        "Manufacturer": "Dell Inc.",
+                        "MemorySummary": {
+                            "Status": {
+                                "Health": "OK",
+                                "HealthRollup": "OK",
+                                "State": "Enabled"
+                            },
+                            "TotalSystemMemoryGiB": 119.209344
+                        },
+                        "Model": "PowerEdge R430",
+                        "Name": "System",
+                        "PartNumber": "0CN7X8A01",
+                        "PowerState": "On",
+                        "ProcessorSummary": {
+                            "Count": 2,
+                            "LogicalProcessorCount": 32,
+                            "Model": "Intel(R) Xeon(R) CPU E5-2630 v3 @ 2.40GHz",
+                            "Status": {
+                                "Health": "OK",
+                                "HealthRollup": "OK",
+                                "State": "Enabled"
+                            }
+                        },
+                        "SKU": "1HTQWG2",
+                        "SerialNumber": "CN779216AB00QD",
+                        "Status": {
+                            "Health": "OK",
+                            "HealthRollup": "OK",
+                            "State": "Enabled"
+                        },
+                        "SystemType": "Physical"
+                    }
+                ]
+            ],
+            "ret": true
+        }
+    }
+
+TASK [Get several inventories] *************************************************
+ok: [bmc-adn3]
+
+TASK [debug] *******************************************************************
+ok: [bmc-adn3] => 
+  msg: |-
+    {
+        "bios_attribute": {
+            "entries": [
+                [
+                    {
+                        "system_uri": "/redfish/v1/Systems/System.Embedded.1"
+                    },
+                    {
+                        "AcPwrRcvry": "On",
+                        "AcPwrRcvryDelay": "Random",
+                        "AcPwrRcvryUserDelay": 60,
+                        "AesNi": "Enabled",
+                        "AssetTag": "ADN-01",
+                        "BootMode": "Bios",
+                        "BootSeqRetry": "Enabled",
+                        "CollaborativeCpuPerfCtrl": "Disabled",
+                        "ConTermType": "Vt100Vt220",
+                        "CorrEccSmi": "Enabled",
+                        "CurrentEmbVideoState": "Enabled",
+                        "DcuIpPrefetcher": "Enabled",
+                        "DcuStreamerPrefetcher": "Enabled",
+                        "DynamicCoreAllocation": "Disabled",
+                        "EmbNic1Nic2": "Enabled",
+                        "EmbNic3Nic4": "Enabled",
+                        "EmbSata": "AhciMode",
+                        "EmbVideo": "Enabled",
+                        "EnergyEfficientTurbo": "Enabled",
+                        "EnergyPerformanceBias": "BalancedPerformance",
+                        "ErrPrompt": "Enabled",
+                        "ExtSerialConnector": "Serial1",
+                        "FailSafeBaud": "115200",
+                        "ForceInt10": "Disabled",
+                        "GlobalSlotDriverDisable": "Disabled",
+                        "HddFailover": "Disabled",
+                        "IntegratedRaid": "Enabled",
+                        "IntelTxt": "Off",
+                        "InternalUsb": "On",
+                        "IoNonPostedPrefetch": "Enabled",
+                        "IoatEngine": "Disabled",
+                        "LogicalProc": "Enabled",
+                        "MemFrequency": "MaxPerf",
+                        "MemOpMode": "OptimizerMode",
+                        "MemPatrolScrub": "Standard",
+                        "MemRefreshRate": "1x",
+                        "MemTest": "Disabled",
+                        "MmioAbove4Gb": "Enabled",
+                        "MonitorMwait": "Enabled",
+                        "NmiButton": "Disabled",
+                        "NodeInterleave": "Disabled",
+                        "NumLock": "On",
+                        "OneTimeBootMode": "Disabled",
+                        "OneTimeBootSeqDev": "HardDisk.List.1-1",
+                        "OneTimeHddSeqDev": "RAID.Integrated.1-1",
+                        "OsWatchdogTimer": "Disabled",
+                        "PasswordStatus": "Unlocked",
+                        "PowerSaver": "Disabled",
+                        "Proc1Brand": "Intel(R) Xeon(R) CPU E5-2630 v3 @ 2.40GHz",
+                        "Proc1Id": "6-3F-2",
+                        "Proc1L2Cache": "8x256 KB",
+                        "Proc1L3Cache": "20 MB",
+                        "Proc1Microcode": "0x38",
+                        "Proc1NumCores": 8,
+                        "Proc1TurboCoreNum": "All",
+                        "Proc2Brand": "Intel(R) Xeon(R) CPU E5-2630 v3 @ 2.40GHz",
+                        "Proc2Id": "6-3F-2",
+                        "Proc2L2Cache": "8x256 KB",
+                        "Proc2L3Cache": "20 MB",
+                        "Proc2Microcode": "0x38",
+                        "Proc2NumCores": 8,
+                        "Proc2TurboCoreNum": "All",
+                        "Proc64bit": "Yes",
+                        "ProcAdjCacheLine": "Enabled",
+                        "ProcAts": "Enabled",
+                        "ProcBusSpeed": "8.0 GT/s",
+                        "ProcC1E": "Enabled",
+                        "ProcCStates": "Enabled",
+                        "ProcConfigTdp": "Nominal",
+                        "ProcCoreSpeed": "2.40 GHz",
+                        "ProcCores": "All",
+                        "ProcExecuteDisable": "Enabled",
+                        "ProcHwPrefetcher": "Enabled",
+                        "ProcPwrPerf": "SysDbpm",
+                        "ProcTurboMode": "Enabled",
+                        "ProcVirtualization": "Enabled",
+                        "ProcX2Apic": "Disabled",
+                        "PwrButton": "Enabled",
+                        "QpiSpeed": "MaxDataRate",
+                        "RedirAfterBoot": "Enabled",
+                        "RtidSetting": "Disabled",
+                        "SHA256SetupPassword": "",
+                        "SHA256SetupPasswordSalt": "",
+                        "SHA256SystemPassword": "",
+                        "SHA256SystemPasswordSalt": "",
+                        "SataPortA": "Auto",
+                        "SataPortACapacity": "N/A",
+                        "SataPortADriveType": "Unknown Device",
+                        "SataPortAModel": "Unknown",
+                        "SataPortB": "Auto",
+                        "SataPortBCapacity": "N/A",
+                        "SataPortBDriveType": "Unknown Device",
+                        "SataPortBModel": "Unknown",
+                        "SataPortC": "Auto",
+                        "SataPortCCapacity": "N/A",
+                        "SataPortCDriveType": "Unknown Device",
+                        "SataPortCModel": "Unknown",
+                        "SataPortD": "Auto",
+                        "SataPortDCapacity": "N/A",
+                        "SataPortDDriveType": "Unknown Device",
+                        "SataPortDModel": "Unknown",
+                        "SataPortE": "Auto",
+                        "SataPortECapacity": "N/A",
+                        "SataPortEDriveType": "Unknown Device",
+                        "SataPortEModel": "Unknown",
+                        "SataPortF": "Auto",
+                        "SataPortFCapacity": "N/A",
+                        "SataPortFDriveType": "Unknown Device",
+                        "SataPortFModel": "Unknown",
+                        "SataPortG": "Auto",
+                        "SataPortGCapacity": "N/A",
+                        "SataPortGDriveType": "Unknown Device",
+                        "SataPortGModel": "Unknown",
+                        "SataPortH": "Auto",
+                        "SataPortHCapacity": "N/A",
+                        "SataPortHDriveType": "Unknown Device",
+                        "SataPortHModel": "Unknown",
+                        "SataPortI": "Auto",
+                        "SataPortICapacity": "N/A",
+                        "SataPortIDriveType": "Unknown Device",
+                        "SataPortIModel": "Unknown",
+                        "SataPortJ": "Auto",
+                        "SataPortJCapacity": "N/A",
+                        "SataPortJDriveType": "Unknown Device",
+                        "SataPortJModel": "Unknown",
+                        "SecureBoot": "Disabled",
+                        "SecureBootPolicy": "Standard",
+                        "SecurityFreezeLock": "Enabled",
+                        "SerialComm": "OnConRedirAuto",
+                        "SerialPortAddress": "Serial1Com2Serial2Com1",
+                        "SetBootOrderFqdd1": "",
+                        "SetBootOrderFqdd10": "",
+                        "SetBootOrderFqdd11": "",
+                        "SetBootOrderFqdd12": "",
+                        "SetBootOrderFqdd13": "",
+                        "SetBootOrderFqdd14": "",
+                        "SetBootOrderFqdd15": "",
+                        "SetBootOrderFqdd16": "",
+                        "SetBootOrderFqdd2": "",
+                        "SetBootOrderFqdd3": "",
+                        "SetBootOrderFqdd4": "",
+                        "SetBootOrderFqdd5": "",
+                        "SetBootOrderFqdd6": "",
+                        "SetBootOrderFqdd7": "",
+                        "SetBootOrderFqdd8": "",
+                        "SetBootOrderFqdd9": "",
+                        "SetLegacyHddOrderFqdd1": "",
+                        "SetLegacyHddOrderFqdd10": "",
+                        "SetLegacyHddOrderFqdd11": "",
+                        "SetLegacyHddOrderFqdd12": "",
+                        "SetLegacyHddOrderFqdd13": "",
+                        "SetLegacyHddOrderFqdd14": "",
+                        "SetLegacyHddOrderFqdd15": "",
+                        "SetLegacyHddOrderFqdd16": "",
+                        "SetLegacyHddOrderFqdd2": "",
+                        "SetLegacyHddOrderFqdd3": "",
+                        "SetLegacyHddOrderFqdd4": "",
+                        "SetLegacyHddOrderFqdd5": "",
+                        "SetLegacyHddOrderFqdd6": "",
+                        "SetLegacyHddOrderFqdd7": "",
+                        "SetLegacyHddOrderFqdd8": "",
+                        "SetLegacyHddOrderFqdd9": "",
+                        "SetupPassword": null,
+                        "SnoopMode": "EarlySnoop",
+                        "SriovGlobalEnable": "Disabled",
+                        "SysMemSize": "128 GB",
+                        "SysMemSpeed": "1866 Mhz",
+                        "SysMemType": "ECC DDR4",
+                        "SysMemVolt": "1.20 V",
+                        "SysMfrContactInfo": "www.dell.com",
+                        "SysPassword": null,
+                        "SysProfile": "PerfPerWattOptimizedDapc",
+                        "SystemBiosVersion": "2.2.5",
+                        "SystemCpldVersion": "1.0.3",
+                        "SystemManufacturer": "Dell Inc.",
+                        "SystemMeVersion": "3.1.3.36",
+                        "SystemModelName": "PowerEdge R430",
+                        "SystemServiceTag": "1HTQWG2",
+                        "TpmCommand": "None",
+                        "TpmFirmware": "",
+                        "TpmInfo": "Type: 1.2-NTC",
+                        "TpmPpiBypassClear": "Disabled",
+                        "TpmPpiBypassProvision": "Disabled",
+                        "TpmSecurity": "Off",
+                        "TpmStatus": "Unknown",
+                        "UefiComplianceVersion": "2.4",
+                        "UefiVariableAccess": "Standard",
+                        "UncoreFrequency": "DynamicUFS",
+                        "Usb3Setting": "Disabled",
+                        "UsbPorts": "AllOn",
+                        "VideoMem": "16 MB",
+                        "WorkloadProfile": "NotAvailable",
+                        "WriteCache": "Enabled"
+                    }
+                ]
+            ],
+            "ret": true
+        },
+        "nic": {
+            "entries": [
+                [
+                    {
+                        "resource_uri": "/redfish/v1/Systems/System.Embedded.1"
+                    },
+                    [
+                        {
+                            "AutoNeg": true,
+                            "Description": "Embedded NIC 1 Port 1 Partition 1",
+                            "FQDN": null,
+                            "IPv4Addresses": [],
+                            "IPv6Addresses": [],
+                            "Id": "NIC.Embedded.1-1-1",
+                            "MACAddress": "18:66:DA:7C:A7:8D",
+                            "MTUSize": null,
+                            "Name": "System Ethernet Interface",
+                            "NameServers": [],
+                            "PermanentMACAddress": "18:66:DA:7C:A7:8D",
+                            "SpeedMbps": 1000,
+                            "Status": {
+                                "Health": "OK",
+                                "State": "Enabled"
+                            }
+                        },
+                        {
+                            "AutoNeg": false,
+                            "Description": "Embedded NIC 2 Port 1 Partition 1",
+                            "FQDN": null,
+                            "IPv4Addresses": [],
+                            "IPv6Addresses": [],
+                            "Id": "NIC.Embedded.2-1-1",
+                            "MACAddress": "18:66:DA:7C:A7:8E",
+                            "MTUSize": null,
+                            "Name": "System Ethernet Interface",
+                            "NameServers": [],
+                            "PermanentMACAddress": "18:66:DA:7C:A7:8E",
+                            "SpeedMbps": 0,
+                            "Status": {
+                                "Health": "OK",
+                                "State": "StandbyOffline"
+                            }
+                        },
+                        {
+                            "AutoNeg": true,
+                            "Description": "Embedded NIC 3 Port 1 Partition 1",
+                            "FQDN": null,
+                            "IPv4Addresses": [],
+                            "IPv6Addresses": [],
+                            "Id": "NIC.Embedded.3-1-1",
+                            "MACAddress": "18:66:DA:7C:A7:8F",
+                            "MTUSize": null,
+                            "Name": "System Ethernet Interface",
+                            "NameServers": [],
+                            "PermanentMACAddress": "18:66:DA:7C:A7:8F",
+                            "SpeedMbps": 1000,
+                            "Status": {
+                                "Health": "OK",
+                                "State": "Enabled"
+                            }
+                        },
+                        {
+                            "AutoNeg": true,
+                            "Description": "Embedded NIC 4 Port 1 Partition 1",
+                            "FQDN": null,
+                            "IPv4Addresses": [],
+                            "IPv6Addresses": [],
+                            "Id": "NIC.Embedded.4-1-1",
+                            "MACAddress": "18:66:DA:7C:A7:90",
+                            "MTUSize": null,
+                            "Name": "System Ethernet Interface",
+                            "NameServers": [],
+                            "PermanentMACAddress": "18:66:DA:7C:A7:90",
+                            "SpeedMbps": 1000,
+                            "Status": {
+                                "Health": "OK",
+                                "State": "Enabled"
+                            }
+                        }
+                    ]
+                ]
+            ],
+            "ret": true
+        }
+    }
+
+TASK [Get default system inventory and user information] ***********************
+ok: [bmc-adn3]
+
+TASK [debug] *******************************************************************
+ok: [bmc-adn3] => 
+  msg: |-
+    {
+        "system": {
+            "entries": [
+                [
+                    {
+                        "system_uri": "/redfish/v1/Systems/System.Embedded.1"
+                    },
+                    {
+                        "AssetTag": "MINEFI FRANCETHD1 1HTQWG2",
+                        "BiosVersion": "2.2.5",
+                        "HostName": "adn3",
+                        "Id": "System.Embedded.1",
+                        "Manufacturer": "Dell Inc.",
+                        "MemorySummary": {
+                            "Status": {
+                                "Health": "OK",
+                                "HealthRollup": "OK",
+                                "State": "Enabled"
+                            },
+                            "TotalSystemMemoryGiB": 119.209344
+                        },
+                        "Model": "PowerEdge R430",
+                        "Name": "System",
+                        "PartNumber": "0CN7X8A01",
+                        "PowerState": "On",
+                        "ProcessorSummary": {
+                            "Count": 2,
+                            "LogicalProcessorCount": 32,
+                            "Model": "Intel(R) Xeon(R) CPU E5-2630 v3 @ 2.40GHz",
+                            "Status": {
+                                "Health": "OK",
+                                "HealthRollup": "OK",
+                                "State": "Enabled"
+                            }
+                        },
+                        "SKU": "1HTQWG2",
+                        "SerialNumber": "CN779216AB00QD",
+                        "Status": {
+                            "Health": "OK",
+                            "HealthRollup": "OK",
+                            "State": "Enabled"
+                        },
+                        "SystemType": "Physical"
+                    }
+                ]
+            ],
+            "ret": true
+        },
+        "user": {
+            "entries": [
+                {
+                    "Enabled": false,
+                    "Id": "1",
+                    "Locked": false,
+                    "Name": "User Account",
+                    "RoleId": "None",
+                    "UserName": ""
+                },
+            ],
+            "ret": true
+        }
+    }
+
+TASK [Get default system, user and firmware information] ***********************
+ok: [bmc-adn3]
+
+TASK [debug] *******************************************************************
+ok: [bmc-adn3] => 
+  msg: |-
+    {
+        "firmware": {
+            "entries": [
+                {
+                    "Id": "Current-101434-2.23",
+                    "Name": "BP13G+ 0:1",
+                    "SoftwareId": "101434",
+                    "Status": {
+                        "Health": "OK",
+                        "State": "Enabled"
+                    },
+                    "Updateable": true,
+                    "Version": "2.23"
+                },
+                {
+                    "Id": "Current-101551-25.5.0.0019",
+                    "Name": "PERC H330 Mini",
+                    "SoftwareId": "101551",
+                    "Status": {
+                        "Health": "OK",
+                        "State": "Enabled"
+                    },
+                    "Updateable": true,
+                    "Version": "25.5.0.0019"
+                },
+                {
+                    "Id": "Current-102377-20.2.17",
+                    "Name": "Broadcom Gigabit Ethernet BCM5720 - 18:66:DA:7C:A7:8D",
+                    "SoftwareId": "102377",
+                    "Status": {
+                        "Health": "OK",
+                        "State": "Enabled"
+                    },
+                    "Updateable": true,
+                    "Version": "20.2.17"
+                },
+                {
+                    "Id": "Current-159-2.2.5",
+                    "Name": "BIOS",
+                    "SoftwareId": "159",
+                    "Status": {
+                        "Health": "OK",
+                        "State": "Enabled"
+                    },
+                    "Updateable": true,
+                    "Version": "2.2.5"
+                },
+                {
+                    "Id": "Installed-101434-2.23",
+                    "Name": "BP13G+ 0:1",
+                    "SoftwareId": "101434",
+                    "Status": {
+                        "Health": "OK",
+                        "State": "Enabled"
+                    },
+                    "Updateable": true,
+                    "Version": "2.23"
+                },
+                {
+                    "Id": "Installed-101551-25.5.0.0019",
+                    "Name": "PERC H330 Mini",
+                    "SoftwareId": "101551",
+                    "Status": {
+                        "Health": "OK",
+                        "State": "Enabled"
+                    },
+                    "Updateable": true,
+                    "Version": "25.5.0.0019"
+                },
+                {
+                    "Id": "Installed-101621-00.30.44",
+                    "Name": "Power Supply.Slot.1",
+                    "SoftwareId": "101621",
+                    "Status": {
+                        "Health": "OK",
+                        "State": "Enabled"
+                    },
+                    "Updateable": true,
+                    "Version": "00.30.44"
+                },
+                {
+                    "Id": "Installed-101734-2.1",
+                    "Name": "OS COLLECTOR 2.1, A00",
+                    "SoftwareId": "101734",
+                    "Status": {
+                        "Health": "OK",
+                        "State": "Enabled"
+                    },
+                    "Updateable": true,
+                    "Version": "2.1"
+                },
+                {
+                    "Id": "Installed-102377-20.2.17",
+                    "Name": "Broadcom Gigabit Ethernet BCM5720 - 18:66:DA:7C:A7:8D",
+                    "SoftwareId": "102377",
+                    "Status": {
+                        "Health": "OK",
+                        "State": "Enabled"
+                    },
+                    "Updateable": true,
+                    "Version": "20.2.17"
+                },
+                {
+                    "Id": "Installed-104714-DA03",
+                    "Name": "Disk 0 in Backplane 1 of Integrated RAID Controller 1",
+                    "SoftwareId": "104714",
+                    "Status": {
+                        "Health": "OK",
+                        "State": "Enabled"
+                    },
+                    "Updateable": true,
+                    "Version": "DA03"
+                },
+                {
+                    "Id": "Installed-159-2.2.5",
+                    "Name": "BIOS",
+                    "SoftwareId": "159",
+                    "Status": {
+                        "Health": "OK",
+                        "State": "Enabled"
+                    },
+                    "Updateable": true,
+                    "Version": "2.2.5"
+                },
+                {
+                    "Id": "Installed-18981-16.04.07",
+                    "Name": "Dell OS Driver Pack, 16.04.07, A00",
+                    "SoftwareId": "18981",
+                    "Status": {
+                        "Health": "OK",
+                        "State": "Enabled"
+                    },
+                    "Updateable": true,
+                    "Version": "16.04.07"
+                },
+                {
+                    "Id": "Installed-25227-2.75.75.75",
+                    "Name": "Integrated Dell Remote Access Controller",
+                    "SoftwareId": "25227",
+                    "Status": {
+                        "Health": "OK",
+                        "State": "Enabled"
+                    },
+                    "Updateable": true,
+                    "Version": "2.75.75.75"
+                },
+                {
+                    "Id": "Installed-25806-4239A33",
+                    "Name": "Dell 32 Bit uEFI Diagnostics, version 4239, 4239A33, 4239.41",
+                    "SoftwareId": "25806",
+                    "Status": {
+                        "Health": "OK",
+                        "State": "Enabled"
+                    },
+                    "Updateable": true,
+                    "Version": "4239A33"
+                },
+                {
+                    "Id": "Installed-27763-1.0.3",
+                    "Name": "System CPLD",
+                    "SoftwareId": "27763",
+                    "Status": {
+                        "Health": "OK",
+                        "State": "Enabled"
+                    },
+                    "Updateable": true,
+                    "Version": "1.0.3"
+                },
+                {
+                    "Id": "Installed-28897-2.75.75.75",
+                    "Name": "Lifecycle Controller",
+                    "SoftwareId": "28897",
+                    "Status": {
+                        "Health": "OK",
+                        "State": "Enabled"
+                    },
+                    "Updateable": false,
+                    "Version": "2.75.75.75"
+                },
+                {
+                    "Id": "Previous-101434-2.23",
+                    "Name": "BP13G+ 0:1",
+                    "SoftwareId": "101434",
+                    "Status": {
+                        "Health": "OK",
+                        "State": "Enabled"
+                    },
+                    "Updateable": true,
+                    "Version": "2.23"
+                },
+                {
+                    "Id": "Previous-102377-20.2.17",
+                    "Name": "Broadcom Gigabit Ethernet BCM5720 - 18:66:DA:7C:A7:8D",
+                    "SoftwareId": "102377",
+                    "Status": {
+                        "Health": "OK",
+                        "State": "Enabled"
+                    },
+                    "Updateable": true,
+                    "Version": "20.2.17"
+                },
+                {
+                    "Id": "Previous-25227-2.40.40.40",
+                    "Name": "Integrated Dell Remote Access Controller",
+                    "SoftwareId": "25227",
+                    "Status": {
+                        "Health": "OK",
+                        "State": "Enabled"
+                    },
+                    "Updateable": true,
+                    "Version": "2.40.40.40"
+                }
+            ],
+            "ret": true
+        },
+        "system": {
+            "entries": [
+                [
+                    {
+                        "system_uri": "/redfish/v1/Systems/System.Embedded.1"
+                    },
+                    {
+                        "AssetTag": "MINEFI FRANCETHD1 1HTQWG2",
+                        "BiosVersion": "2.2.5",
+                        "HostName": "adn3",
+                        "Id": "System.Embedded.1",
+                        "Manufacturer": "Dell Inc.",
+                        "MemorySummary": {
+                            "Status": {
+                                "Health": "OK",
+                                "HealthRollup": "OK",
+                                "State": "Enabled"
+                            },
+                            "TotalSystemMemoryGiB": 119.209344
+                        },
+                        "Model": "PowerEdge R430",
+                        "Name": "System",
+                        "PartNumber": "0CN7X8A01",
+                        "PowerState": "On",
+                        "ProcessorSummary": {
+                            "Count": 2,
+                            "LogicalProcessorCount": 32,
+                            "Model": "Intel(R) Xeon(R) CPU E5-2630 v3 @ 2.40GHz",
+                            "Status": {
+                                "Health": "OK",
+                                "HealthRollup": "OK",
+                                "State": "Enabled"
+                            }
+                        },
+                        "SKU": "1HTQWG2",
+                        "SerialNumber": "CN779216AB00QD",
+                        "Status": {
+                            "Health": "OK",
+                            "HealthRollup": "OK",
+                            "State": "Enabled"
+                        },
+                        "SystemType": "Physical"
+                    }
+                ]
+            ],
+            "ret": true
+        },
+        "user": {
+            "entries": [
+                {
+                    "Enabled": false,
+                    "Id": "1",
+                    "Locked": false,
+                    "Name": "User Account",
+                    "RoleId": "None",
+                    "UserName": ""
+                },
+            ],
+            "ret": true
+        }
+    }
+
+TASK [Get Manager NIC inventory information] ***********************************
+ok: [bmc-adn3]
+
+TASK [debug] *******************************************************************
+ok: [bmc-adn3] => 
+  msg: |-
+    {
+        "manager_nics": {
+            "entries": [
+                [
+                    {
+                        "resource_uri": "/redfish/v1/Managers/iDRAC.Embedded.1"
+                    },
+                    [
+                        {
+                            "AutoNeg": true,
+                            "Description": "Management Network Interface",
+                            "FQDN": "",
+                            "IPv4Addresses": [
+                                {
+                                    "Address": "192.168.134.103",
+                                    "AddressOrigin": "Static",
+                                    "Gateway": "192.168.134.254",
+                                    "SubnetMask": "255.255.255.0"
+                                }
+                            ],
+                            "IPv6Addresses": [
+                                {
+                                    "Address": "::",
+                                    "AddressOrigin": "Static",
+                                    "AddressState": "Preferred",
+                                    "PrefixLength": 64
+                                },
+                            ],
+                            "Id": "iDRAC.Embedded.1#NIC.1",
+                            "MACAddress": "18:66:DA:7C:A7:91",
+                            "MTUSize": 1500,
+                            "Name": "Manager Ethernet Interface",
+                            "NameServers": [
+                                "192.168.134.254",
+                                "192.168.134.254",
+                                "192.168.134.254",
+                                "192.168.134.254",
+                                "::",
+                                "::",
+                                "::",
+                                "::"
+                            ],
+                            "PermanentMACAddress": "18:66:DA:7C:A7:91",
+                            "SpeedMbps": 1000,
+                            "Status": {
+                                "Health": "OK",
+                                "State": "Enabled"
+                            }
+                        }
+                    ]
+                ]
+            ],
+            "ret": true
+        }
+    }
+
+TASK [Get boot override information] *******************************************
+ok: [bmc-adn3]
+
+TASK [debug] *******************************************************************
+ok: [bmc-adn3] => 
+  msg: |-
+    {
+        "boot_override": {
+            "entries": [
+                [
+                    {
+                        "system_uri": "/redfish/v1/Systems/System.Embedded.1"
+                    },
+                    {
+                        "BootSourceOverrideEnabled": "Once",
+                        "BootSourceOverrideMode": "Legacy",
+                        "BootSourceOverrideTarget": "None",
+                        "BootSourceOverrideTarget@Redfish.AllowableValues": [
+                            "None",
+                            "Pxe",
+                            "Cd",
+                            "Floppy",
+                            "Hdd",
+                            "BiosSetup",
+                            "Utilities",
+                            "UefiTarget",
+                            "SDCard",
+                            "UefiHttp"
+                        ],
+                        "UefiTargetBootSourceOverride": ""
+                    }
+                ]
+            ],
+            "ret": true
+        }
+    }
+
+TASK [Get chassis inventory] ***************************************************
+ok: [bmc-adn3]
+
+TASK [debug] *******************************************************************
+ok: [bmc-adn3] => 
+  msg: |-
+    {
+        "chassis": {
+            "entries": [
+                {
+                    "AssetTag": "MINEFI FRANCETHD1 1HTQWG2",
+                    "ChassisType": "Rack",
+                    "Id": "System.Embedded.1",
+                    "IndicatorLED": "Off",
+                    "Manufacturer": "Dell Inc.",
+                    "Model": "PowerEdge R430",
+                    "Name": "Computer System Chassis",
+                    "PartNumber": "0CN7X8A01",
+                    "SerialNumber": "CN779216AB00QD"
+                },
+                {
+                    "AssetTag": "",
+                    "ChassisType": "Enclosure",
+                    "Id": "Enclosure.Internal.0-1:RAID.Integrated.1-1",
+                    "Manufacturer": null,
+                    "Model": "BP13G+ 0:1",
+                    "Name": "BP13G+ 0:1",
+                    "PartNumber": null,
+                    "SerialNumber": null
+                }
+            ],
+            "ret": true
+        }
+    }
+
+TASK [Get all information available in the Manager category] *******************
+ok: [bmc-adn3]
+
+TASK [debug] *******************************************************************
+ok: [bmc-adn3] => 
+  msg: |-
+    {
+        "health_report": {
+            "entries": [
+                [
+                    {
+                        "manager_uri": "/redfish/v1/Managers/iDRAC.Embedded.1"
+                    },
+                    {
+                        "Manager": {
+                            "Status": {
+                                "Health": "OK",
+                                "State": "Enabled"
+                            }
+                        }
+                    }
+                ]
+            ],
+            "ret": true
+        },
+        "host_interfaces": {
+            "entries": [
+                {
+                    "Description": "Management for Host Interface",
+                    "ExternallyAccessible": false,
+                    "HostInterfaceType": "NetworkHostInterface",
+                    "Id": "iDRAC.Embedded.1#Host.1",
+                    "InterfaceEnabled": false,
+                    "Name": "Managed Host Interface 1"
+                }
+            ],
+            "ret": true
+        },
+        "log": {
+            "entries": [
+                {
+                    "Description": "System Event Logs for this manager",
+                    "Sel": [
+                        {
+                            "Created": "2016-11-24T01:14:50+01:00",
+                            "EntryType": "SEL",
+                            "Message": "OEM software event.",
+                            "MessageArgs": [],
+                            "MessageId": "36580",
+                            "Severity": "OK"
+                        },
+                        {
+                            "Created": "2016-11-24T01:14:50+01:00",
+                            "EntryType": "SEL",
+                            "Message": "C: boot completed.",
+                            "MessageArgs": [],
+                            "MessageId": "1ffff",
+                            "Severity": "OK"
+                        },
+                        {
+                            "Created": "2016-11-24T01:05:52+01:00",
+                            "EntryType": "SEL",
+                            "Message": "Log cleared.",
+                            "MessageArgs": [],
+                            "MessageId": "2ffff",
+                            "Severity": "OK"
+                        }
+                    ]
+                },
+                {
+                    "Description": "LC Logs for this manager",
+                    "Lclog": [
+                        {
+                            "Created": "2022-07-14T11:20:31+02:00",
+                            "EntryType": "Oem",
+                            "Message": "Successfully logged in using root, from 192.168.134.254 and REDFISH.",
+                            "MessageArgs": [
+                                "root",
+                                "192.168.134.254",
+                                "REDFISH"
+                            ],
+                            "MessageId": "USR0030",
+                            "OemRecordFormat": "Dell",
+                            "Severity": "OK"
+                        }
+                    ]
+                }
+            ],
+            "ret": true
+        },
+        "manager": {
+            "entries": [
+                [
+                    {
+                        "manager_uri": "/redfish/v1/Managers/iDRAC.Embedded.1"
+                    },
+                    {
+                        "FirmwareVersion": "2.75.75.75",
+                        "ManagerType": "BMC",
+                        "Model": "13G Monolithic",
+                        "Status": {
+                            "Health": "OK",
+                            "State": "Enabled"
+                        },
+                        "UUID": "3247574f-c0b1-5180-5410-00484c4c4544"
+                    }
+                ]
+            ],
+            "ret": true
+        },
+        "manager_nics": {
+            "entries": [
+                [
+                    {
+                        "resource_uri": "/redfish/v1/Managers/iDRAC.Embedded.1"
+                    },
+                    [
+                        {
+                            "AutoNeg": true,
+                            "Description": "Management Network Interface",
+                            "FQDN": "",
+                            "IPv4Addresses": [
+                                {
+                                    "Address": "192.168.134.103",
+                                    "AddressOrigin": "Static",
+                                    "Gateway": "192.168.134.254",
+                                    "SubnetMask": "255.255.255.0"
+                                }
+                            ],
+                            "IPv6Addresses": [
+                                {
+                                    "Address": "::",
+                                    "AddressOrigin": "Static",
+                                    "AddressState": "Preferred",
+                                    "PrefixLength": 64
+                                }
+                            ],
+                            "Id": "iDRAC.Embedded.1#NIC.1",
+                            "MACAddress": "18:66:DA:7C:A7:91",
+                            "MTUSize": 1500,
+                            "Name": "Manager Ethernet Interface",
+                            "NameServers": [
+                                "192.168.134.254",
+                                "192.168.134.254",
+                                "192.168.134.254",
+                                "192.168.134.254",
+                                "::",
+                                "::",
+                                "::",
+                                "::"
+                            ],
+                            "PermanentMACAddress": "18:66:DA:7C:A7:91",
+                            "SpeedMbps": 1000,
+                            "Status": {
+                                "Health": "OK",
+                                "State": "Enabled"
+                            }
+                        }
+                    ]
+                ]
+            ],
+            "ret": true
+        },
+        "network_protocols": {
+            "entries": {
+                "DHCP": {
+                    "ProtocolEnabled": true
+                },
+                "HTTP": {
+                    "Port": 80,
+                    "ProtocolEnabled": true
+                },
+                "HTTPS": {
+                    "Port": 443,
+                    "ProtocolEnabled": true
+                },
+                "IPMI": {
+                    "ProtocolEnabled": false
+                },
+                "KVMIP": {
+                    "Port": 5900,
+                    "ProtocolEnabled": true
+                },
+                "NTP": {
+                    "NTPServers": [
+                        "",
+                        "pool.ntp.org",
+                        ""
+                    ],
+                    "NTPServers@odata.count": 3,
+                    "ProtocolEnabled": true
+                },
+                "SNMP": {
+                    "Port": 161,
+                    "ProtocolEnabled": true
+                },
+                "SSH": {
+                    "Port": 22,
+                    "ProtocolEnabled": true
+                },
+                "Telnet": {
+                    "Port": 23,
+                    "ProtocolEnabled": false
+                },
+                "VirtualMedia": {
+                    "ProtocolEnabled": true
+                }
+            },
+            "ret": true
+        },
+        "virtual_media": {
+            "entries": [
+                [
+                    {
+                        "resource_uri": "/redfish/v1/Managers/iDRAC.Embedded.1"
+                    },
+                    [
+                        {
+                            "ConnectedVia": "NotConnected",
+                            "Description": "iDRAC Virtual Media Services Settings",
+                            "Id": "RemovableDisk",
+                            "Image": null,
+                            "ImageName": null,
+                            "MediaTypes": [
+                                "USBStick"
+                            ],
+                            "Name": "Virtual Removable Disk",
+                            "WriteProtected": null
+                        },
+                        {
+                            "ConnectedVia": "NotConnected",
+                            "Description": "iDRAC Virtual Media Services Settings",
+                            "Id": "CD",
+                            "Image": null,
+                            "ImageName": null,
+                            "MediaTypes": [
+                                "CD",
+                                "DVD"
+                            ],
+                            "Name": "Virtual CD",
+                            "WriteProtected": null
+                        }
+                    ]
+                ]
+            ],
+            "ret": true
+        }
+    }
+
+TASK [Get firmware update capability information] ******************************
+ok: [bmc-adn3]
+
+TASK [debug] *******************************************************************
+ok: [bmc-adn3] => 
+  msg: |-
+    {
+        "firmware_update_capabilities": {
+            "entries": {
+                "#UpdateService.SimpleUpdate": [
+                    "HTTP"
+                ],
+                "Oem": [
+                    "Key TransferProtocol@Redfish.AllowableValues not found"
+                ]
+            },
+            "ret": true
+        }
+    }

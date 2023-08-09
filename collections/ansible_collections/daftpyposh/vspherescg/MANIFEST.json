@@ -1,0 +1,41 @@
+{
+ "collection_info": {
+  "namespace": "daftpyposh",
+  "name": "vspherescg",
+  "version": "1.0.0",
+  "authors": [
+   "Barry Browne @barrybrowne",
+   "Bill Kindle @billkindle",
+   "David Prows @Commputethis",
+   "Jon Husen @JonHusen",
+   "Justin Brant @JustinBrant93",
+   "Markus Kraus @vMarkus_K"
+  ],
+  "readme": "README.md",
+  "tags": [
+   "vmware",
+   "vsphere",
+   "security"
+  ],
+  "description": "An Ansible based toolkit to apply the VMware vSphere Security Configuration Guide",
+  "license": [
+   "GPL-2.0-or-later"
+  ],
+  "license_file": null,
+  "dependencies": {
+   "community.vmware": ">=1.14.0"
+  },
+  "repository": "https://github.com/DaftPyPosh/vSphereSCG",
+  "documentation": "https://github.com/DaftPyPosh/vSphereSCG",
+  "homepage": "https://github.com/DaftPyPosh/vSphereSCG/",
+  "issues": "https://github.com/DaftPyPosh/vSphereSCG/issues"
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "3fced73ae5860d1e5b09c7600601d183a4a1c28ebaf38b9996f0f7ee291ee90b",
+  "format": 1
+ },
+ "format": 1
+}

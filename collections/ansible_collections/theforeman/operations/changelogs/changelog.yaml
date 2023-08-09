@@ -1,0 +1,81 @@
+ancestor: null
+releases:
+  0.1.0:
+    release_date: '2020-12-03'
+  0.2.0:
+    release_date: '2021-02-11'
+  0.3.0:
+    release_date: '2021-04-06'
+  1.0.0:
+    changes:
+      release_summary: This is the first stable release of the ``theforeman.operations``
+        collection.
+    release_date: '2022-03-22'
+  1.0.1:
+    changes:
+      bugfixes:
+      - correct collection metadata, so it can be uploaded to Galaxy
+    release_date: '2022-03-24'
+  1.0.2:
+    changes:
+      bugfixes:
+      - installer role - don't fail execution in check mode
+    fragments:
+    - installer-checkmode-fix.yml
+    release_date: '2022-03-25'
+  1.1.0:
+    changes:
+      minor_changes:
+      - cloud_connector - new role for installing Cloud Connector (https://github.com/theforeman/foreman-operations-collection/pull/85)
+    fragments:
+    - 85-fix-forwarder-url.yml
+    release_date: '2022-04-25'
+  1.1.1:
+    changes:
+      bugfixes:
+      - update FORWARDER_URL for cloud connector
+    release_date: '2022-05-09'
+  1.2.0:
+    changes:
+      minor_changes:
+      - add HTTP proxy support for cloud connector
+    release_date: '2022-05-16'
+  1.2.1:
+    changes:
+      bugfixes:
+      - fix parsing of openssl certificate subject for EL7 and EL8
+    release_date: '2022-05-23'
+  1.2.2:
+    changes:
+      bugfixes:
+      - cloud_connector role - use a regular expression to parse the CN from the cert
+    fragments:
+    - 94-subject-regex.yml
+    release_date: '2022-06-08'
+  1.2.3:
+    changes:
+      bugfixes:
+      - foreman_repositories - also enable pulpcore module when enabling katello
+    release_date: '2022-06-17'
+  1.3.0:
+    changes:
+      bugfixes:
+      - cloud_connector role - Ensure ``rhcd.service`` starts after system reboots
+      - fix paths in execution-environment.yml (https://bugzilla.redhat.com/show_bug.cgi?id=2156941)
+      minor_changes:
+      - new role to configure backups using ``foreman-maintain``
+      - update default Foreman to 3.5
+      - update default Puppet to 7
+    release_date: '2023-01-04'
+  2.0.0:
+    changes:
+      breaking_changes:
+      - ansible_repositories role - removed as it's not required anymore since EL
+        8.6 contains ``ansible-core``
+      minor_changes:
+      - cloud_connector role - don't mark proxy.conf systemd drop-in word-inaccessible,
+        there is no benefit and systemd warns about this (https://bugzilla.redhat.com/show_bug.cgi?id=2169682)
+    fragments:
+    - bz2169682-world-inaccessible.yml
+    - drop-ansible-repositories-role.yml
+    release_date: '2023-05-08'
