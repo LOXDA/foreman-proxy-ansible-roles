@@ -1,0 +1,81 @@
+[submodule "ansible-role-apache"]
+	path = roles/ansible-role-apache
+	url = ssh://gitea@gitea.lab.loxda.net:2222/MIROIR/ansible-role-apache.git
+[submodule "ansible-role-apache-php-fpm"]
+	path = roles/ansible-role-apache-php-fpm
+	url = ssh://gitea@gitea.lab.loxda.net:2222/MIROIR/ansible-role-apache-php-fpm.git
+[submodule "ansible-role-bind"]
+	path = roles/ansible-role-bind
+	url = ssh://gitea@gitea.lab.loxda.net:2222/MIROIR/ansible-role-bind.git
+[submodule "ansible-role-deploy-git-repos"]
+	path = roles/ansible-role-deploy-git-repos
+	url = ssh://gitea@gitea.lab.loxda.net:2222/MIROIR/ansible-role-deploy-git-repos.git
+[submodule "ansible-role-docker"]
+	path = roles/ansible-role-docker
+	url = ssh://gitea@gitea.lab.loxda.net:2222/MIROIR/ansible-role-docker.git
+[submodule "ansible-role-elasticsearch"]
+	path = roles/ansible-role-elasticsearch
+	url = ssh://gitea@gitea.lab.loxda.net:2222/MIROIR/ansible-role-elasticsearch.git
+[submodule "ansible-role-filebeat"]
+	path = roles/ansible-role-filebeat
+	url = ssh://gitea@gitea.lab.loxda.net:2222/MIROIR/ansible-role-filebeat.git
+[submodule "ansible-role-gitea"]
+	path = roles/ansible-role-gitea
+	url = ssh://gitea@gitea.lab.loxda.net:2222/MIROIR/ansible-role-gitea.git
+[submodule "ansible-role-haproxy"]
+	path = roles/ansible-role-haproxy
+	url = ssh://gitea@gitea.lab.loxda.net:2222/MIROIR/ansible-role-haproxy.git
+[submodule "ansible-role-helm"]
+	path = roles/ansible-role-helm
+	url = ssh://gitea@gitea.lab.loxda.net:2222/MIROIR/ansible-role-helm.git
+[submodule "ansible-role-kibana"]
+	path = roles/ansible-role-kibana
+	url = ssh://gitea@gitea.lab.loxda.net:2222/MIROIR/ansible-role-kibana.git
+[submodule "ansible-role-kubernetes"]
+	path = roles/ansible-role-kubernetes
+	url = ssh://gitea@gitea.lab.loxda.net:2222/MIROIR/ansible-role-kubernetes.git
+[submodule "ansible-role-ldap"]
+	path = roles/ansible-role-ldap
+	url = ssh://gitea@gitea.lab.loxda.net:2222/MIROIR/ansible-role-ldap.git
+[submodule "ansible-role-linux-desktop"]
+	path = roles/ansible-role-linux-desktop
+	url = ssh://gitea@gitea.lab.loxda.net:2222/MIROIR/ansible-role-linux-desktop.git
+[submodule "ansible-role-logstash"]
+	path = roles/ansible-role-logstash
+	url = ssh://gitea@gitea.lab.loxda.net:2222/MIROIR/ansible-role-logstash.git
+[submodule "ansible-role-motd"]
+	path = roles/ansible-role-motd
+	url = ssh://gitea@gitea.lab.loxda.net:2222/MIROIR/ansible-role-motd.git
+[submodule "ansible-role-mysql"]
+	path = roles/ansible-role-mysql
+	url = ssh://gitea@gitea.lab.loxda.net:2222/MIROIR/ansible-role-mysql.git
+[submodule "ansible-role-php"]
+	path = roles/ansible-role-php
+	url = ssh://gitea@gitea.lab.loxda.net:2222/MIROIR/ansible-role-php.git
+[submodule "ansible-role-proxmox"]
+	path = roles/ansible-role-proxmox
+	url = ssh://gitea@gitea.lab.loxda.net:2222/MIROIR/ansible-role-proxmox.git
+[submodule "ansible-role-systemd-networkd"]
+	path = roles/ansible-role-systemd-networkd
+	url = ssh://gitea@gitea.lab.loxda.net:2222/MIROIR/ansible-role-systemd-networkd.git
+[submodule "ansible-role-windows-initial-setup"]
+	path = roles/ansible-role-windows-initial-setup
+	url = ssh://gitea@gitea.lab.loxda.net:2222/MIROIR/ansible-role-windows-initial-setup.git
+[submodule "ansible-role-windows-bginfo"]
+	path = roles/ansible-role-windows-bginfo
+	url = ssh://gitea@gitea.lab.loxda.net:2222/MIROIR/ansible-role-windows-bginfo.git
+[submodule "ansible-role-windows-updates"]
+	path = roles/ansible-role-windows-updates
+	url = ssh://gitea@gitea.lab.loxda.net:2222/MIROIR/ansible-role-windows-updates.git
+[submodule "ansible-role-windows-wsl2"]
+	path = roles/ansible-role-windows-wsl2
+	url = ssh://gitea@gitea.lab.loxda.net:2222/MIROIR/ansible-role-windows-wsl2.git
+[submodule "ansible-role-debloat-windows"]
+	path = roles/ansible-role-debloat-windows
+	url = ssh://gitea@gitea.lab.loxda.net:2222/MIROIR/ansible-role-debloat-windows.git
+[submodule "ansible-role-cacertificates"]
+	path = roles/ansible-role-cacertificates
+	url = ssh://gitea@gitea.lab.loxda.net:2222/MIROIR/ansible-role-cacertificates.git
+[submodule "ansible-firefox-config"]
+	path = roles/ansible-firefox-config
+	url = ssh://gitea@gitea.lab.loxda.net:2222/MIROIR/ansible-firefox-config.git
