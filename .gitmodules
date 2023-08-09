@@ -79,3 +79,12 @@
 [submodule "ansible-firefox-config"]
 	path = roles/ansible-firefox-config
 	url = ssh://gitea@gitea.lab.loxda.net:2222/MIROIR/ansible-firefox-config.git
+[submodule "ansible-windows-remote-desktop"]
+	path = roles/ansible-windows-remote-desktop
+	url = ssh://gitea@gitea.lab.loxda.net:2222/MIROIR/ansible-windows-remote-desktop.git
+[submodule "ansible-role-windows-proxy"]
+	path = roles/ansible-role-windows-proxy
+	url = ssh://gitea@gitea.lab.loxda.net:2222/LAB/ansible-role-windows-proxy.git
+[submodule "ansible-role-windows-firefoxesr"]
+	path = roles/ansible-role-windows-firefoxesr
+	url = ssh://gitea@gitea.lab.loxda.net:2222/LAB/ansible-role-windows-firefoxesr.git
