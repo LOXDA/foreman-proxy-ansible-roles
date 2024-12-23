@@ -1,3 +1,6 @@
+[submodule "ansible-role-sudo"]
+	path = roles/ansible-role-sudo
+	url = https://github.com/stafwag/ansible-role-sudo.git
 [submodule "ansible-role-apache"]
 	path = roles/ansible-role-apache
 	url = https://github.com/geerlingguy/ansible-role-apache.git
