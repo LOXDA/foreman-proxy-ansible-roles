@@ -1,9 +1,0 @@
-- name: Set Shell Timeout
-  vmware_host_config_manager:
-    hostname: "{{ vcenter_hostname }}"
-    username: "{{ vcenter_username }}"
-    password: "{{ vcenter_password }}"
-    cluster_name: "{{ cluster_name }}"
-    validate_certs: false
-    options:
-      "UserVars.ESXiShellTimeOut": 600
