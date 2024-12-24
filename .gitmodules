@@ -1,7 +1,7 @@
 [submodule "ansible-role-sudo"]
 	path = roles/ansible-role-sudo
 	url = https://github.com/tbasset/ansible-role-sudo.git
-	branch = i-smell-dead-variables
+	branch = winter-is-coming
 [submodule "ansible-role-apache"]
 	path = roles/ansible-role-apache
 	url = https://github.com/geerlingguy/ansible-role-apache.git
