@@ -1,0 +1,27 @@
+---
+collections:
+- devsec.hardening
+- community.general
+- community.crypto
+- community.mysql
+- community.postgresql
+# - theforeman.operations
+# - theforeman.foreman
+# - community.vmware
+# - daftpyposh.vspherescg
+# - community.windows
+# - community.hashi_vault
+# - netbox.netbox
+# - dellemc.openmanage
+# - cisco.ise
+# - cisco.aci
+# - cisco.ios
+# - cisco.nxos
+# - cisco.asa
+# - f5networks.f5_modules
+# - f5networks.f5_bigip
+# - paloaltonetworks.panos
+# - juniper.device
+# - name: my_namespace.my_other_collection
+#   version: ">=1.2.0" # Version range identifiers (default: ``*``)
+#   source: ... # The Galaxy URL to pull the collection from (default: ``--api-server`` from cmdline)
