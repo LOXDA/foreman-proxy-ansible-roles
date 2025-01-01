@@ -86,3 +86,6 @@
 [submodule "ansible-windows-remote-desktop"]
 	path = roles/ansible-windows-remote-desktop
 	url = https://github.com/mrlesmithjr/ansible-windows-remote-desktop.git
+[submodule "ansible-role-snmpd"]
+	path = roles/ansible-role-snmpd
+	url = https://github.com/robertdebock/ansible-role-snmpd.git
